@@ -66,7 +66,7 @@ sudo apt-get update
 sudo apt-get install awscli -y
 ```
 
-- **Step 2: Configure your AWS credentials**\
+- **Step 2: Configure your AWS credentials**
 
 Once you have your Access Key ID, Secret Access Key, and Default Region Name, you can configure the AWS CLI using the following command:
 
@@ -110,7 +110,6 @@ The region name corresponds to the AWS region you want to set as default for you
 Choose the region closest to you or the one where your resources will be deployed.
 
 
-
 ### Terraform Project Structure
 
 When working with Terraform, it's best practice to organize your configuration into separate files for better maintainability and clarity. Here’s how we can structure the Terraform project:
@@ -139,21 +138,35 @@ eks-cluster/
 - **Purpose**: This file is used to define input variables, which are used throughout the Terraform configuration. It helps in parameterizing the values, making the code reusable and adaptable to different environments.
 - **Example**:
     ```hcl
-    variable "region" {
-      description = "The AWS region to deploy resources in."
-      type        = string
-      default     = "us-west-2"
-    }
+variable "region" {
+  description = "The AWS region to deploy resources in."
+  type        = string
+  default     = "us-west-2"
+}
+
+variable "ami" {
+  description = "The AMI ID for the instance."
+  type        = string
+  default     = "ami-0c55b159cbfafe1f0"
+}
+
+variable "instance_type" {
+  description = "The type of instance to use."
+  type        = string
+  default     = "t2.micro"
+}
+
+
     ```
 
 #### `main.tf`
 - **Purpose**: This is the core file where you define the actual resources, modules, and other components of your infrastructure. This is the heart of your Terraform configuration.
 - **Example**:
     ```hcl
-    resource "aws_instance" "example" {
-      ami           = "ami-0c55b159cbfafe1f0"
-      instance_type = "t2.micro"
-    }
+resource "aws_instance" "example" {
+  ami           = var.ami
+  instance_type = var.instance_type
+}
     ```
 
 #### `outputs.tf`
