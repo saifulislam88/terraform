@@ -56,7 +56,7 @@ Provide your AWS Access Key ID, Secret Access Key, region, and output format.
 #### For an Existing User:
 - If you already have an Access Key and Secret Access Key, you can find it under the same **Security credentials** tab for the user in the IAM console.
 
-## 2. Default Region Name
+#### 2. Default Region Name
 The region name corresponds to the AWS region you want to set as default for your CLI commands. Some common region names are:
 
 - `us-east-1` (N. Virginia)
