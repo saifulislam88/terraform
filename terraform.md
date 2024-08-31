@@ -20,22 +20,29 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 sudo apt-get update -y && sudo apt-get install terraform -y 
 ```
 
-- **Step 2: AWS CLI Setup and Authentication**
-  
-**Install the AWS CLI if you haven’t already:**
+- **Step 2: AWS CLI Setup and Authentication - Install the AWS CLI if you haven’t already:**
+
 ```sh
 sudo apt-get update
 sudo apt-get install awscli -y
 ```
 
+- **Step 2: Configure your AWS credentials**
+Once you have your Access Key ID, Secret Access Key, and Default Region Name, you can configure the AWS CLI using the following command:
+
+`aws configure`
+
+**You'll be prompted to enter the values:**
+![image](https://github.com/user-attachments/assets/4151cb7e-de28-4fdb-a559-40bc75ea5217)
+
+Provide your AWS Access Key ID, Secret Access Key, region, and output format.
 
 
+### How to Obtain AWS Credentials and Set Default Region
 
-# How to Obtain AWS Credentials and Set Default Region
+#### 1. AWS Access Key ID & Secret Access Key
 
-## 1. AWS Access Key ID & Secret Access Key
-
-### For a New User:
+#### For a New User:
 1. Log in to the AWS Management Console.
 2. Navigate to the **IAM (Identity and Access Management)** service.
 3. Under **Access management**, click on **Users**.
@@ -46,7 +53,7 @@ sudo apt-get install awscli -y
 8. Once created, you will see the **Access Key ID** and **Secret Access Key**. 
    - **Important:** Copy them immediately as you will not be able to see the secret key again.
 
-### For an Existing User:
+#### For an Existing User:
 - If you already have an Access Key and Secret Access Key, you can find it under the same **Security credentials** tab for the user in the IAM console.
 
 ## 2. Default Region Name
@@ -63,13 +70,5 @@ Choose the region closest to you or the one where your resources will be deploye
 
 
 
-**Configure your AWS credentials:**
-Once you have your Access Key ID, Secret Access Key, and Default Region Name, you can configure the AWS CLI using the following command:
 
-`aws configure`
 
-**You'll be prompted to enter the values:**
-![image](https://github.com/user-attachments/assets/4151cb7e-de28-4fdb-a559-40bc75ea5217)
-
-Provide your AWS Access Key ID, Secret Access Key, region, and output format.
-`
