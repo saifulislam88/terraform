@@ -1,5 +1,5 @@
-https://www.linkedin.com/pulse/day-60-terraform-sayali-shewale/\
-https://www.linkedin.com/pulse/terraform-muhammad-junaid-usman-9vfhf/\
+https://www.linkedin.com/pulse/day-60-terraform-sayali-shewale/ \
+https://www.linkedin.com/pulse/terraform-muhammad-junaid-usman-9vfhf/ \
 https://www.linkedin.com/pulse/terraform-guide-yash-kumar-zoryc/
 
 
