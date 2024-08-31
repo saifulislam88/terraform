@@ -31,7 +31,9 @@ sudo apt-get install awscli -y
 
 Once you have your Access Key ID, Secret Access Key, and Default Region Name, you can configure the AWS CLI using the following command:
 
-`aws configure`
+```sh
+aws configure
+```
 
 **You'll be prompted to enter the values:**
 ![image](https://github.com/user-attachments/assets/4151cb7e-de28-4fdb-a559-40bc75ea5217)
