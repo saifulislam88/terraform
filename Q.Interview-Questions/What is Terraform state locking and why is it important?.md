@@ -22,7 +22,7 @@ Always enable **remote state locking** (e.g., with `DynamoDB` for `S3 backend`) 
 
 
 
-#### Terraform Remote State with S3 + DynamoDB Locking
+#### Terraform Remote State with S3 backend + DynamoDB Locking
 
 ##### ✅ 1. Create S3 Bucket for Terraform State
 
