@@ -15,5 +15,5 @@ Using S3 + DynamoDB backend:
    -  Terraform locks the state in DynamoDB
    -  User B tries `terraform apply` → ❌ gets error: `Error acquiring the state lock`
 
-✅ **Key Point**:
+✅ **Key Point**:\
 Always enable **remote state locking** (e.g., with DynamoDB for S3 backend) when working in teams to **ensure consistency and safety**.
